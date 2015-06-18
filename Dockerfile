@@ -10,5 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && \
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
+ADD limits.conf /etc/security/limits.conf
+
 # rmiregistry for jstatd
 EXPOSE 1099 
